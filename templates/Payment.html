@@ -1,0 +1,57 @@
+{% load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing address</title>
+    <link rel="stylesheet" href="{% static 'Payment form.css' %}">
+</head>
+<body>
+
+
+
+<header>
+    <div class="container">
+        <div class="left">
+             <h3>Billing address></h3>
+            <form action="pay" action="{% url 'thank' %}" method=''>
+
+                 Full name : <input type="text" name='name' placeholder="Enter name">
+                Email : <input type="text" name='email' placeholder="Email">
+
+                Address : <input type="text" name='address' placeholder="Enter address">
+
+                City : <input type="text" name='city' placeholder="Enter city">
+                <div id="zip">
+                  <label>
+                  State : <input type="text" name='state' placeholder="Enter state">
+                </label>
+                    <label>
+                        Zip code : <input type="number" name='code' name="" placeholder="zip code">
+                    </label>
+                </div>
+            <h3>PAYMENT</h3>
+                Accepted Card<br>
+               <img src="{% static 'card.png' %}">
+               <br><br>
+
+               Credit card number : <input type="text" name='no' placeholder="Credit card number">
+
+               Exp month : <input type="text" name='exp' placeholder="Exp month">
+
+               <div id="zip">
+
+                       <label>
+                       CVV
+                       <input type="number" name="cvv" placeholder="CVV">
+                  <a href="{% url 'thank' %}">PROCEED</a>
+                    </label>
+               </div>
+           </form>
+
+        </div>
+    </div>
+</header>
+</body>
+</html>

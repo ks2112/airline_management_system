@@ -1,0 +1,17 @@
+{% load static%}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tile></tile>
+    <link rel="stylesheet" href="{% static 'Thank you.css' %}">
+</head>
+<body>
+    <a href="{% url 'pay' %}"></a>
+    <div class="popup">
+        <img src="{% static 'Tick.png' %}">
+        <h2>Thank You!</h2>
+        <p>Your payment has been successfully received. Thanks!</p>
+        <a href="{% url 'home' %}">OK</a>
+    </div>
+</body>
+</html>

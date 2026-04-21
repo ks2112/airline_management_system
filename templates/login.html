@@ -1,0 +1,32 @@
+{% load static%}
+<html lang="en" and dir="Itr">
+<head>
+   <meta charset="UTF-8">
+   <title>Login Form Validation</title>
+
+
+
+   <link rel="stylesheet" href="{% static 'style.css' %}">
+   <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+<form class="box" action="{% url 'home' %}" method="">
+
+<h1>
+    Login
+</h1>
+<input type="text" name="" placeholder="Enter Username" id="username">
+<i class="far fa-envelope"></i>
+<input type="password" name="" placeholder="Enter Passsword" id="password">
+
+<button id="btn" type="submit" onclick="validate()">Login</button>
+<a href="{% url 'regist' %}">Create account</a>
+
+</form>
+
+
+</body>
+
+
+
+</html>
